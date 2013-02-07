@@ -24,6 +24,6 @@ void Particle::update()
 
 void Particle::draw()
 {
-	ofSetColor(color);
+	ofSetHexColor(color);
 	ofCircle(x, y, radius);
 }
