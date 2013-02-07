@@ -2,15 +2,21 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
+     ofEnableSmoothing();
+
+    // Fixed framerate
+    ofSetFrameRate(30);
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
+    theBall.moveTo(mouseX,mouseY);
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-
+    ofBackgroundGradient(ofColor::gray,ofColor(30,10,30), OF_GRADIENT_CIRCULAR);
+    theBall.draw();
 }
 
 //--------------------------------------------------------------
@@ -35,7 +41,8 @@ void testApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
-
+    //xPos = ofRandom( ofGetWindowWidth() );
+    //yPos = ofRandom( ofGetWindowHeight() );
 }
 
 //--------------------------------------------------------------
@@ -54,6 +61,6 @@ void testApp::gotMessage(ofMessage msg){
 }
 
 //--------------------------------------------------------------
-void testApp::dragEvent(ofDragInfo dragInfo){ 
+void testApp::dragEvent(ofDragInfo dragInfo){
 
 }
