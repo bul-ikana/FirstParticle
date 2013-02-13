@@ -4,14 +4,14 @@ Particle::Particle()
 {
 	x = ofRandomf();
 	y = ofRandomf();
-	speedX = ofRandom(0,4);
-	speedY = ofRandom(0,4);
-	radius = ofRandom(0,4);
+	speedX = ofRandom(0,8);
+	speedY = ofRandom(0,8);
+	radius = ofRandom(0,15);
 	color = ofRandom(0, 0xff0000);
 
 	age = 0;
 	dead = false;
-	maxAge = ofRandom(0, 50)+250;
+	maxAge = ofRandom(0, 300);
 }
 
 void Particle::update()

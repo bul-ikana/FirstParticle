@@ -9,11 +9,12 @@ class ParticleEmitter : public ofBaseApp{
 
 	private:
 
-	int centerX;
-	int centerY;
 	float rotation;
 
 	public:
+
+    int x;
+    int y;
 
 	void setup();
 	void update();
